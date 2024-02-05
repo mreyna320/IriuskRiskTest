@@ -1,0 +1,21 @@
+@use 'sass:color';
+@import "/src/styles/colors";
+
+.Card {
+    width: 280px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: transparentize($mainLightColor, 0.9);
+
+
+    .Card__img_container {
+        img {
+            height: 100px;
+            width: 100px;
+        }
+    }
+
+    .Card__description {}
+}

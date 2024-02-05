@@ -1,0 +1,9 @@
+@import "../../styles/colors";
+
+.navitem {
+    text-decoration: none;
+    color: $mainColor;
+    &.active {
+        font-weight: bold;
+    }
+}

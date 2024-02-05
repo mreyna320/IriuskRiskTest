@@ -1,0 +1,21 @@
+@import "/src/styles/colors";
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h1 {
+  color: $mainDarkColor;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: $mainColor;
+}
+
+h3 {
+  color: $mainLightColor;
+}

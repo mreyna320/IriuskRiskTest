@@ -1,0 +1,134 @@
+@use 'sass:color';
+@import "/src/styles/colors";
+
+
+.Layout {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 180px auto;
+    grid-template-rows: 40px auto 50px;
+    grid-template-areas:
+        "Nav Header"
+        "Nav Content"
+        "Nav Footer";
+
+
+    .user-buttons {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    >.Nav {
+        grid-area: Nav;
+        padding: 10px 15px 0px;
+        box-sizing: border-box;
+        border-right: 1px solid black;
+        background-color: transparentize($mainLightColor, 0.8);
+
+        .Nav__menu {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+
+        >.Nav__image {
+            text-align: center;
+
+            img {
+                height: 100px;
+                width: 100px;
+            }
+        }
+
+        .user-buttons--Nav {
+            display: none;
+        }
+    }
+
+    >.Header {
+        grid-area: Header;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: $mainLightColor;
+        color: #fff;
+
+        .main-title {
+            display: flex;
+            justify-content: space-between;
+
+            h3 {
+                color: #fff;
+            }
+        }
+    }
+
+    >.Content {
+        grid-area: Content;
+        padding: 10px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        background-color: transparentize($mainLightColor, 0.9);
+    }
+
+    >.Footer {
+        grid-area: Footer;
+        border-top: 1px solid black;
+        background-color: $mainLightColor;
+        color: #fff;
+        display: flex;
+        padding-right: 10px;
+        align-items: center;
+        justify-content: end;
+        font-style: italic;
+    }
+}
+
+@media (max-width: 440px) {
+    .Layout {
+        grid-template-columns: auto;
+        grid-template-rows: 30px 40px auto 50px;
+        grid-template-areas:
+            "Nav"
+            "Header"
+            "Content"
+            "Footer";
+
+        >.Nav {
+            display: flex;
+            gap: 7px;
+            border-right: none;
+            justify-content: space-between;
+
+            .user-buttons--Nav {
+                display: flex;
+                text-align: right;
+            }
+
+
+            .Nav__menu {
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+            }
+
+            >.Nav__image {
+                text-align: right;
+
+                img {
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+        }
+
+        >.Header {
+            .user-buttons--Header {
+                display: none;
+            }
+        }
+
+    }
+}

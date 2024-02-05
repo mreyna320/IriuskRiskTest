@@ -1,0 +1,74 @@
+@import "../../styles/colors";
+
+.Starships {
+    >h2 {
+        margin-bottom: 10px;
+    }
+
+    .Starships__content {
+
+        table {
+            min-width: 360px;
+            // table-layout: fixed;
+            width: 100%;
+
+            border-collapse: collapse;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            box-sizing: border-box;
+
+            th,
+            td {
+                padding: 12px 15px;
+                box-sizing: border-box;
+            }
+
+            tbody tr {
+                border-bottom: 1px solid #dddddd;
+
+                &:hover {
+                    font-weight: bold;
+                    color: $mainColor;
+                }
+            }
+
+            tbody tr:nth-of-type(even) {
+                background-color: #f3f3f3;
+            }
+
+            tbody tr:last-of-type {
+                border-bottom: 2px solid $mainColor;
+            }
+
+            thead tr {
+                background-color: $mainColor;
+                color: #ffffff;
+                text-align: left;
+            }
+
+            .idColumn {
+                width: 10%;
+                text-align: left;
+            }
+
+            .nameColumn {
+                width: 80%;
+                text-align: left;
+            }
+
+            .actionColumn {
+                width: 10%;
+                text-align: center;
+            }
+
+            tfoot {
+                display: flex;
+                align-items: center;
+                background-color: $mainLightColor;
+
+                tr {}
+            }
+        }
+    }
+}
